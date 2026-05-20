@@ -504,16 +504,53 @@ paste at the VERY END
   }
   
   .featured-grid,
-  .team-grid{
+  .featured-grid{
     display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-    gap:20px;
-    max-width:1100px;
+    grid-template-columns:repeat(2,1fr);
+  
+    gap:16px;
+  
+    max-width:900px;
+  
     margin:0 auto;
-    padding:0 20px;
+  
+    padding:0 16px;
   }
   
   .person-card,
+  .person-card{
+    position:relative;
+  
+    background:linear-gradient(
+      180deg,
+      rgba(255,255,255,.03),
+      rgba(255,255,255,.01)
+    );
+  
+    border:1px solid rgba(255,255,255,.08);
+  
+    border-radius:30px;
+  
+    padding:24px 16px;
+  
+    min-height:300px;
+  
+    text-align:center;
+  
+    overflow:hidden;
+  
+    backdrop-filter:blur(12px);
+  }
+  .featured-grid{
+    grid-template-columns:repeat(2,1fr);
+    gap:14px;
+    padding:0 14px;
+  }
+
+  .person-card{
+    min-height:290px;
+    padding:22px 14px;
+  }
   .team-card {
   max-width: 360px;
   margin: 0 auto;
