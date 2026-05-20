@@ -3,6 +3,15 @@ const cards = document.querySelectorAll('.team-card');
 
 const defaultFilter = 'tech';
 
+document.querySelectorAll('.committee-text').forEach((text) => {
+
+  text.classList.toggle(
+    'active',
+    text.dataset.desc === defaultFilter
+  );
+
+});
+
 filters.forEach((btn) => {
 
   btn.addEventListener('click', () => {
@@ -14,6 +23,15 @@ filters.forEach((btn) => {
     btn.classList.add('active');
 
     const value = btn.dataset.filter;
+
+    document.querySelectorAll('.committee-text').forEach((text) => {
+
+      text.classList.toggle(
+        'active',
+        text.dataset.desc === value
+      );
+    
+    });
 
     cards.forEach((card) => {
 

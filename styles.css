@@ -504,9 +504,13 @@ paste at the VERY END
   }
   
   .featured-grid,
-  .team-grid {
-  grid-template-columns: 1fr;
-  gap: 16px;
+  .team-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:20px;
+    max-width:1100px;
+    margin:0 auto;
+    padding:0 20px;
   }
   
   .person-card,
@@ -563,7 +567,36 @@ paste at the VERY END
   font-size: 15px;
   line-height: 1.7;
   }
-  }
+
+    .team-grid{
+      grid-template-columns:repeat(2,1fr);
+      gap:14px;
+      padding:0 14px;
+    }
+  
+    .team-card{
+      width:100%;
+      min-height:300px;
+      padding:22px 14px;
+      border-radius:28px;
+    }
+  
+    .mini-avatar{
+      width:92px;
+      height:92px;
+    }
+  
+    .team-card h3{
+      font-size:20px;
+      line-height:1.4;
+    }
+  
+    .team-card p{
+      font-size:15px;
+    }
+  
+  
+  
   #changing-word{
     font-size: .75em;
     margin-top: 14px;
@@ -573,4 +606,87 @@ paste at the VERY END
     border-left: 2px solid #29F598;
     padding-left: 6px;
   }
+  .footer{
+    position:relative;
+    padding:80px 20px 50px;
+    text-align:center;
+    overflow:hidden;
+  }
+  
+  .footer-glow{
+    position:absolute;
+    top:-80px;
+    left:50%;
+    transform:translateX(-50%);
+    width:240px;
+    height:240px;
+  
+    background:radial-gradient(
+      circle,
+      rgba(41,245,152,.22),
+      transparent 70%
+    );
+  
+    filter:blur(30px);
+    pointer-events:none;
+  }
+  
+  .footer-title{
+    position:relative;
+    margin:0;
+  
+    font-size:22px;
+    font-weight:600;
+    letter-spacing:.5px;
+  
+    color:#29f598;
+  
+    text-shadow:
+      0 0 12px rgba(41,245,152,.25);
+  }
+  
+  .footer-sub{
+    position:relative;
+    display:block;
+  
+    margin-top:10px;
+  
+    font-size:14px;
+    color:rgba(255,255,255,.5);
+  
+    letter-spacing:2px;
+  }
+  .committee-description{
+    max-width:760px;
+    margin:18px auto 38px;
+    padding:0 20px;
+    text-align:center;
+  }
+  
+  .committee-text{
+    display:none;
+  
+    font-family:'IBM Plex Sans Arabic', system-ui, sans-serif;
+  
+    font-size:clamp(15px,2vw,18px);
+  
+    line-height:2;
+  
+    color:rgba(255,255,255,.68);
+  }
+  
+  .committee-text.active{
+    display:block;
+  }
+  
+  .committee-text span{
+    color:#29f598;
+  
+    font-weight:700;
+  
+    text-shadow:
+      0 0 8px rgba(41,245,152,.55),
+      0 0 18px rgba(41,245,152,.25);
+  }
+}
     
