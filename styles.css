@@ -236,13 +236,13 @@ paste at the VERY END
   position: absolute;
   width: 180vw;
   bottom: 18%;
-  opacity: .9;
+  opacity: .82;
   }
 
 .tweets{
   position:absolute;
   left:50%;
-  bottom:12%;
+  bottom:5%;
   transform:translateX(-50%);
 
   width:min(940px,84vw);
@@ -565,6 +565,8 @@ paste at the VERY END
   }
   }
   #changing-word{
+    font-size: .75em;
+    margin-top: 14px;
     display: inline-block;
     min-width: 160px;
     color: #29F598;
