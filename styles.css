@@ -226,8 +226,10 @@ paste at the VERY END
   }
   
   .hero h1 {
-  font-size: clamp(38px, 13vw, 58px);
-  line-height: 1.18;
+  font-size: clamp(42px, 9vw, 88px);
+  line-height: 1.15;
+  letter-spacing: -2px;
+  margin: 0;
   }
   
   .orbit {
@@ -236,10 +238,6 @@ paste at the VERY END
   bottom: 18%;
   opacity: .9;
   }
-  
-  /* =========================
-TWEETS AUTO SWAP
-========================= */
 
 .tweets{
   position:absolute;
@@ -247,15 +245,13 @@ TWEETS AUTO SWAP
   bottom:12%;
   transform:translateX(-50%);
 
-  width:min(1060px,92vw);
-  height:360px;
+  width:min(940px,84vw);
+  height:330px;
 
   z-index:3;
 
   isolation:isolate;
 }
-
-/* green glow */
 
 .tweets::before{
   content:"";
@@ -304,8 +300,6 @@ TWEETS AUTO SWAP
   z-index:1;
 }
 
-/* positions */
-
 .tweet-left{
   left:4%;
   top:54px;
@@ -343,7 +337,6 @@ TWEETS AUTO SWAP
   animation-delay:4s;
 }
 
-/* animation */
 
 @keyframes tweetSwap{
 
@@ -460,7 +453,7 @@ TWEETS AUTO SWAP
   .tweets{
     width:82vw;
     height:330px;
-    bottom:14%;
+    bottom:4%;
   }
 
   .tweet{
@@ -572,6 +565,8 @@ TWEETS AUTO SWAP
   }
   }
   #changing-word{
+    display: inline-block;
+    min-width: 160px;
     color: #29F598;
     border-left: 2px solid #29F598;
     padding-left: 6px;
